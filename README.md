@@ -59,3 +59,5 @@ Licensed under the MIT License. Copyright &copy; Neutralinojs and contributors.
 | retry@0.12.0          | MIT     | https://github.com/tim-kos/node-retry              |
 | shell-exec@1.0.2      | MIT     | https://github.com/tiaanduplessis/shell-exec       |
 | signal-exit@3.0.7     | ISC     | https://github.com/tapjs/signal-exit               |
+
+[NoVNC](https://github.com/novnc/noVNC) is licensed under the Mozilla Public License 2.0.
