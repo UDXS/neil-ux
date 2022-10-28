@@ -1,0 +1,71 @@
+h1 {
+    padding: 10%;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+#username {
+    font-weight: 200;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+    color: #CCC;
+    font-size: 14px;
+}
+
+* {
+    font-family: sans-serif;
+    color: #DDD;
+    user-select: none;
+}
+
+#bottom-text {
+    color:#AAA;
+    font-size: smaller;
+    position: absolute;
+    bottom: 20%;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.env-container {
+    display: flex;
+    position: absolute;
+    top:50%;
+    width:fit-content;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.env-elem {
+    border-color: #000;
+    border-radius: 5%;
+    border-width: 4px;
+    border-style: solid;
+    width: fit-content;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+
+    transition-property: border-color;
+    transition-duration: 0.4s;
+}
+
+.env-elem:hover {
+    background: radial-gradient(circle, rgba(48,48,48,1) 0%, rgba(0,0,0,1) 100%);
+    border-color: #333;
+}
+
+.env-icon {
+    width: 128px;
+    height: 128px;
+    filter: drop-shadow(6px 3px 12px #000);
+}

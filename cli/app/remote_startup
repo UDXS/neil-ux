@@ -1,0 +1,2 @@
+#! /bin/sh
+NEIL_UX_MODE=RemoteStart node /home/shared/.neil-ux/app/uxutility.js

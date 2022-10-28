@@ -1,0 +1,30 @@
+#! /bin/sh
+echo "Installing CLI dependencies (requires Node/NPM)..."
+(cd chooser && neu build --release)
+
+echo "Building Chooser (requires @neutralinojs/neu from NPM)..."
+(cd chooser && neu build --release)
+
+[ ! -d "./chooser/dist/app-release" ] && echo "Missing Chooser Build"
+
+
+echo "Installing CLI in /home/shared/.neil-ux..."
+install -m 755 -d /home/shared/.neil-ux/app
+install -m 755 -D cli/app/* /home/shared/.neil-ux/app
+echo "Installing command in /home/shared/.neil-ux..."
+install -m 755 cli/neil-ux /usr/local/bin
+
+
+echo "Creating database directory in /home/shared/.neil-ux..."
+install -m 777 -d /home/shared/.neil-ux/store
+
+echo "Creating empty database in /home/shared/.neil-ux..."
+echo "{}" > alloc
+install -m 777 -b numbered -D alloc /home/shared/.neil-ux/store
+rm alloc
+
+echo "Installing Chooser in /opt/neil-chooser..."
+install -m 755 -d /opt/neil-chooser
+install -m 755 chooser/dist/app-release/* /home/shared/.neil-ux 
+
+echo "Done."

@@ -1,0 +1,16 @@
+{
+  "name": "niel-ux",
+  "version": "1.0.0",
+  "description": "GUI Platform Initiator",
+  "main": "uxutility.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Davit Margarian",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "death": "^1.1.0",
+    "kill-port": "^2.0.1",
+    "proper-lockfile": "^4.1.2"
+  }
+}
