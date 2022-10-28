@@ -1,4 +1,8 @@
 #! /bin/sh
+
+echo "Installing NoVNC..."
+git clone https://github.com/novnc/noVNC /opt/noVNC
+
 echo "Installing CLI dependencies (requires Node/NPM)..."
 (cd chooser && neu build --release)
 
