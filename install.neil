@@ -16,7 +16,7 @@ echo "Installing CLI in /home/shared/.neil-ux..."
 install -m 755 -d /home/shared/.neil-ux/app
 install -m 755 -D cli/app/* /home/shared/.neil-ux/app
 echo "Installing Dependencies in /home/shared/.neil-ux..."
-npm i
+(cd /home/shared/.neil-ux/app && npm i)
 
 echo "Installing command in /home/shared/.neil-ux..."
 install -m 755 cli/neil-ux /usr/local/bin
