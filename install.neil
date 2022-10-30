@@ -3,8 +3,8 @@
 echo "Installing NoVNC..."
 git clone https://github.com/novnc/noVNC /opt/noVNC
 
-echo "Installing CLI dependencies (requires Node/NPM)..."
-(cd chooser && neu build --release)
+echo "Installing Chooser dependencies (requires Node/NPM)..."
+npm i -g @neutralinojs/neu
 
 echo "Building Chooser (requires @neutralinojs/neu from NPM)..."
 (cd chooser && neu build --release)
@@ -15,6 +15,9 @@ echo "Building Chooser (requires @neutralinojs/neu from NPM)..."
 echo "Installing CLI in /home/shared/.neil-ux..."
 install -m 755 -d /home/shared/.neil-ux/app
 install -m 755 -D cli/app/* /home/shared/.neil-ux/app
+echo "Installing Dependencies in /home/shared/.neil-ux..."
+npm i
+
 echo "Installing command in /home/shared/.neil-ux..."
 install -m 755 cli/neil-ux /usr/local/bin
 
@@ -24,7 +27,7 @@ install -m 777 -d /home/shared/.neil-ux/store
 
 echo "Creating empty database in /home/shared/.neil-ux..."
 echo "{}" > alloc
-install -m 777 -b numbered -D alloc /home/shared/.neil-ux/store
+install -m 777 --backup numbered -D alloc /home/shared/.neil-ux/store
 rm alloc
 
 echo "Installing Chooser in /opt/neil-chooser..."
