@@ -29,8 +29,7 @@ Do not attempt to install this without adaptation to your environment.\
 The file `install.neil` should only be used as a guideline for installation requirements.\
 Values are hardcoded so change `uxutility.js` as needed. 
 
-TigerVNC recommended. When using Chooser, modifications to the system-wide `xstartup`
-may be necessary if Chooser does not properly reopen after closing a DE. Sessions are not persistent.
+TigerVNC recommended. When using Chooser, change `/etc/X11/Xvnc-session` to remove line `vncconfig -iconic &`.Sessions are not persistent.
 
 **NOTE:** There is no intra-server VNC security. Users can access other running sessions if they
 know the correct port number.\
